@@ -1,7 +1,7 @@
 const router = require("express").Router();
 
 const index = require("./controller/index.controller");
-const crud = require("./controller/crud.controller");
+const crud = require("./controller/crud_mysql.controller");
 
 
 router.post('/api/user', crud.createUser);
