@@ -4,9 +4,10 @@ const path = require('path');
 const app = express();
 const port = 3000;
 
-const rotas = require('./rotas');
+const rotas = require('./servidor/rotas');
 
 app.use('/', express.static(path.join(__dirname, '/', 'cliente', '/', 'assets')));
+app.use('/cliente/', express.static(path.join(__dirname, '/', 'cliente')));
 app.use(express.json());
 app.set('view engine', 'ejs');
 app.use(session({ secret: 'rFinanca', resave: true, saveUninitialized: true }));

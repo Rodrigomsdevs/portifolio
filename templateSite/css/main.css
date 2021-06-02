@@ -21,6 +21,7 @@ Table of contents
 
 body {
     font-family: 'Muli', sans-serif;
+    height: 5000px;
 }
 
 /* ==========================
@@ -667,48 +668,6 @@ body {
         margin-top: 40px;
     }
 }
-
-
-.table-dark {
-    color: inherit;
-  
-    th,
-    td,
-    thead th,
-    tbody + tbody {
-      border-color: $table-border-color;
-    }
-  }
-  
-  /* _tables.scss:132 */
-  .table-dark {
-    color: $table-dark-color;
-    background-color: $table-dark-bg;
-  
-    th,
-    td,
-    thead th {
-      border-color: $table-dark-border-color;
-    }
-  
-    &.table-bordered {
-      border: 0;
-    }
-  
-    &.table-striped {
-      tbody tr:nth-of-type(odd) {
-        background-color: $table-dark-accent-bg;
-      }
-    }
-  
-    &.table-hover {
-      tbody tr {
-        @include hover {
-          background-color: $table-dark-hover-bg;
-        }
-      }
-    }
-  }
 
 /* Medium devices (tablets, less than 992px) */
 @media (max-width: 991.98px) {

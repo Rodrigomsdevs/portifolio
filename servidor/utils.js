@@ -12,6 +12,7 @@ async function getSql(query, queryVar = []) {
         });
         
         con.query('CREATE TABLE IF NOT EXISTS `usuarios` (`id` int(11) NOT NULL AUTO_INCREMENT,`usuario` text NOT NULL, `email` text NOT NULL,`senha` text NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB DEFAULT CHARSET=utf8');
+        con.query('	CREATE TABLE IF NOT EXISTS `projetos` (`id` int(11) NOT NULL AUTO_INCREMENT, `nome` text NOT NULL, `linkDownload` text NOT NULL, `qtdeDownload` int(11) NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB DEFAULT CHARSET=latin1');
 
         var teste = con.query(query, queryVar, function (err, result) {
             if (err) {
