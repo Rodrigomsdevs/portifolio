@@ -1,5 +1,4 @@
 const models = require('../models/crud_mysql.models');
-const utils = require('../utils');
 const md5 = require('md5');
 
 async function getUsuarios(req, res) {

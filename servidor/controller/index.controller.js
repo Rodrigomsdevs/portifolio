@@ -1,10 +1,7 @@
 async function index(req, res) {
 
-
-
-
     res.render(process.cwd() + "/cliente/pages/index.ejs", {
-        title: 'Portfólio',
+        title: 'Portfólio - index',
         author: 'Rodrigo silva',
         descricao: 'Rodrigo silva, sistema crud em varias linguagens',
         keywords: 'rodrigo silva, crud',
@@ -16,7 +13,8 @@ async function index(req, res) {
         porém tenho conhecimento em JavaScript e PHP ambos OO.`,
         clientes_felizes: 4,
         projetos_completos: 0,
-        projetos_baixados: 0
+        projetos_baixados: 0,
+        imgOG: 'https://i.ibb.co/yWNxHJR/instagram-profile-image.png'
     });
 
 }

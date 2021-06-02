@@ -3,7 +3,7 @@ const mysql = require('mysql');
 async function getUsuarios(where = "", sqlp = []) {
 
     return new Promise((resolve, reject) => {
-        utils.getSql('SELECT * FROM usuarios' + where, sqlp).then((result) => {
+        getSql('SELECT * FROM usuarios' + where, sqlp).then((result) => {
             resolve(result.result);
         }).catch((error) => {
             reject('Erro -> crud_mysql -> getUsuarios');
