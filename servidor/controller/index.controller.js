@@ -24,7 +24,7 @@ async function index(req, res) {
 
 }
 
-async function crud_node_mysql(rq, res){
+async function crud_node_mysql(rq, res) {
     res.render(process.cwd() + "/cliente/pages/crud_node_mysql.ejs", retornaDescricaoSite());
 }
 
@@ -35,7 +35,7 @@ async function download(req, res) {
     }
     utils.getSql('SELECT * FROM projetos WHERE id = ?', [req.body.id]).then((result) => {
         if (result.result && result.result[0]) {
-            
+
             let nome = result.result[0].nome;
 
             res.setHeader('Content-disposition', 'attachment; filename=' + nome);
@@ -49,7 +49,7 @@ async function download(req, res) {
 
 }
 
-function retornaDescricaoSite(projetos = []){
+function retornaDescricaoSite(projetos = []) {
     return {
         title: 'Portfólio - index',
         author: 'Rodrigo silva',
